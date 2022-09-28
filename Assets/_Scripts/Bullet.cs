@@ -9,18 +9,11 @@ public class Bullet : MonoBehaviour
       //  public float playerHeath = 100;
        //public TextMeshProUGUI playerHealthUI;
 
-
-
     private void OnCollisionEnter(Collision other) {
         Destroy(gameObject);
 
         if(other.collider.tag == "Player")
         {
-/*
-            playerHeath -= 25;
-            playerHealthUI.text = "Health: " + playerHeath.ToString();
-            Debug.Log(playerHeath);
-*/
 
         }
         else if(other.collider.tag == "Enemy")
@@ -28,13 +21,6 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-/*
-    private void Update()
-    {
-        if (playerHeath == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }*/
+
 }
 
